@@ -1,2 +1,2 @@
 # Infinte-Password
-If a need a password i got you
+If a you need a password i got you
