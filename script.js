@@ -10,42 +10,44 @@ var numbers =
 
 
 
+generate.addEventListener("click", askQuestions)
 
 
-var promptLength = window.prompt('Your password will be between 8 - 16 characters, Anwser "YES" if that is ok. "NO", if you want your password longer.');{
+function askQuestions(){
 
-if (promptLength === "yes" || promptLength === "YES" ){
-     window.alert("Password will be between 8 - 16 characters.")
-} else if (promptLength === "no" || promptLength === "NO"){
-    window.alert ("Password will be longer than 16 characters but shorter than 120")
-} else {window.alert('You did not pick a valid option. Try again.') 
+    var promptLength = window.prompt('Your password will be between 8 - 16 characters, Anwser "YES" if that is ok. "NO", if you want your password longer.');{
 
-   
+        if (promptLength === "yes" || promptLength === "YES" ){
+             window.alert("Password will be between 8 - 16 characters.")
+        } else if (promptLength === "no" || promptLength === "NO"){
+            window.alert ("Password will be longer than 16 characters but shorter than 120")
+        } else {window.alert('You did not pick a valid option. Try again.') 
+        
+           
+        }
+        var promptChars = window.prompt('Do you want your password to include Capital Characters.')
+        if (promptLength === "yes" || promptLength === "YES" ){
+            window.alert('Password will include Capital Characters.')
+        }  else if (promptLength === "no" || promptLength === "NO"){
+            window.alert ("Password will not include Capital Characters")
+        }
+            else {window.alert('You did not pick a valid option. Try again.');
+        
+        }
+        
+        var promptSpecials = window.prompt('Should your password include special characters')
+        if (promptLength === "yes" || promptLength === "YES" ){
+            window.alert('Password will include Special Characters.')
+        }  else if (promptLength === "no" || promptLength === "NO"){
+            window.alert ('Password will not include Special Characters')
+        }
+            else {window.alert('You did not pick a valid option. Try again.');
+        
+        }
+
 }
-var promptChars = window.prompt('Do you want your password to include Capital Characters.')
-if (promptLength === "yes" || promptLength === "YES" ){
-    window.alert('Password will include Capital Characters.')
-}  else if (promptLength === "no" || promptLength === "NO"){
-    window.alert ("Password will not include Capital Characters")
-}
-    else {window.alert('You did not pick a valid option. Try again.');
 
-}
 
-var promptSpecials = window.prompt('Should your password include special characters')
-if (promptLength === "yes" || promptLength === "YES" ){
-    window.alert('Password will include Special Characters.')
-}  else if (promptLength === "no" || promptLength === "NO"){
-    window.alert ('Password will not include Special Characters')
-}
-    else {window.alert('You did not pick a valid option. Try again.');
-
-}
-
-var randomPass = function() {
-var passLength = Math.floor(Math.random() * 16) + 20;
-
-}
 
 
 
@@ -63,5 +65,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-}
+generateBtn.addEventListener("click", writePassword)}
